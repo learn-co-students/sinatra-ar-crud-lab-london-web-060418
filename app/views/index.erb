@@ -1,0 +1,11 @@
+ <!-- add new post -->
+<button><a href="/posts/new">Add new post</a></button>
+
+<% @posts.all.each do |post| %>
+  <div>
+    <h3><%= post.name %> </h3>
+    <p><%= post.content %></p>
+    <a href="posts/<%= post.id %>">show</a>
+    <p>*******************</p>
+  </div>
+<% end %>

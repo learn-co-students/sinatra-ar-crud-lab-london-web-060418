@@ -1,0 +1,16 @@
+<h6><a href="/posts">Back to all posts</a></h6>
+
+  <div>
+    <h3><%= @post.name %> </h3>
+    <p><%= @post.content %></p>
+    <p>*******************</p>
+  </div>
+
+  <!-- edit button: -->
+  <button><a href="/posts/<%=@post.id%>/edit">Edit</a></button>
+
+  <!-- delete button/form: -->
+  <form method="POST" action="/posts/<%=@post.id%>/delete">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+      <input type="submit" value="delete">
+  </form>
