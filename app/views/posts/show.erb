@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Single Post</title>
+  </head>
+  <body>
+    <h1>Showing post with ID: <%= @post.id %> </h1>
+
+    <div>
+      <h2>Post Name:</h2>
+      <p> <%= @post.name %> </p>
+    </div>
+
+    <div>
+      <h2>Post Content:</h2>
+      <p> <%= @post.content %> </p>
+    </div>
+
+    <br>
+    <br>
+
+    <a href="/posts/<%=@post.id%>/edit">Edit Post</a>
+
+    <div>
+    <form class="" action="/posts/<%= @post.id %>/delete" method="post">
+      <input type="hidden" id="hidden" name="_method" value="delete">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" id="delete" name="delete">
+    </form>
+    </div>
+
+  </body>
+</html>
