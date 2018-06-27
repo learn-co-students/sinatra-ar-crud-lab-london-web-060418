@@ -1,0 +1,8 @@
+<h1>Welcome to the best Blog Spot!</h1>
+
+<ul>
+  <% @posts.each do |post| %>
+  <h3><%= post.name %></h3>
+  <li><%= post.content %></li>
+  <% end %>
+</ul>
